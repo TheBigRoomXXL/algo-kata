@@ -1,18 +1,49 @@
-// export default class Queue<T> {
-//     public length: number;
 
-    
+type QueueNode<T> = {
+    val: T,
+    next?: QueueNode<T>,
+}
 
-//     constructor() {
-//     }
+export default class Queue<T> {
+    public length: number;
+    private head?: QueueNode<T>;
+    private tail?: QueueNode<T>;
 
-//     enqueue(item: T): void {
+    constructor() {
+        this.head = this.tail = undefined
+        this.length = 0
+    }
 
-// }
-//     deque(): T | undefined {
+    enqueue(item: T): void {
+        const node = { val: item } as QueueNode<T>
+        if (!this.tail) {
+            this.tail = this.head = node
+        } else {
+            this.tail.next = node
+            this.tail = this.tail.next
+        }
+        this.length++
 
-// }
-//     peek(): T | undefined {
+    }
+    deque(): T | undefined {
+        if (!this.head) {
+            return undefined
+        }
 
-// }
-// }
+        const head = this.head
+        this.head = this.head.next
+
+        head.next = undefined
+
+        this.length--
+
+        if (this.length == 0) {
+            this.tail = undefined
+        }
+        return head.val
+    }
+
+    peek(): T | undefined {
+        return this.head?.val
+    }
+}
