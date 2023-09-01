@@ -1,27 +1,27 @@
 export default class ArrayList<T> {
-    public length: number;
+    //     public length: number;
 
-    
 
-    constructor() {
-    }
 
-    prepend(item: T): void {
+    //     constructor() {
+    //     }
 
-}
-    insertAt(item: T, idx: number): void {
+    //     prepend(item: T): void {
 
-}
-    append(item: T): void {
+    // }
+    //     insertAt(item: T, idx: number): void {
 
-}
-    remove(item: T): T | undefined {
+    // }
+    //     append(item: T): void {
 
-}
-    get(idx: number): T | undefined {
+    // }
+    //     remove(item: T): T | undefined {
 
-}
-    removeAt(idx: number): T | undefined {
+    // }
+    //     get(idx: number): T | undefined {
 
-}
+    // }
+    //     removeAt(idx: number): T | undefined {
+
+    // }
 }

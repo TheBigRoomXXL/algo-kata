@@ -1,18 +1,18 @@
-export default class Queue<T> {
-    public length: number;
+// export default class Queue<T> {
+//     public length: number;
 
     
 
-    constructor() {
-    }
+//     constructor() {
+//     }
 
-    enqueue(item: T): void {
+//     enqueue(item: T): void {
 
-}
-    deque(): T | undefined {
+// }
+//     deque(): T | undefined {
 
-}
-    peek(): T | undefined {
+// }
+//     peek(): T | undefined {
 
-}
-}
+// }
+// }
